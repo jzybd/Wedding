@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'Patriciana';
+    src: url('/font/patriciana.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    font-family: 'Patriciana', sans-serif;
+}
+
+
+.section {
+    margin: 0 auto;
+    width: 800px;
+}
