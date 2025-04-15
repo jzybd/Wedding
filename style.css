@@ -5,12 +5,145 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Vetrino';
+    src: url('/font/Vetrino.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TildaSans';
+    src: url('/Wedding/font/tilda-sans_regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Bodega';
+    src: url('/Wedding/font/BodegaScript_0.ttf') format('truetype');
+}
+
 * {
     font-family: 'Patriciana', sans-serif;
 }
 
+/* .tilda-text {
+    font-family: 'TildaSans', sans-serif;
+    font-size: 11pt;
+} */
+
+
 
 .section {
     margin: 0 auto;
-    width: 800px;
+    max-width: 600px;
 }
+
+.container {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.names__top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.names__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 33.3%;
+    gap: 10px;
+}
+
+.text-symbol {
+    font-size: 53pt;
+}
+
+.text-name {
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+.text-line {
+    width: 100px;
+    height: 1px;
+    background-color: #000;
+}
+
+.names__photo {
+    width: 66.6%;
+    height: 500px;  
+}
+
+.photo__img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.names__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin: 0px 40px;
+    font-weight: bold;
+}
+
+#countdown {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    font-family: 'Georgia', serif;
+    text-align: center;
+  }
+  
+  .time-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .number {
+    font-size: 48px;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+  
+  .label {
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin-top: 4px;
+    text-transform: uppercase;
+    color: #333;
+  }
+
+
+  .guests {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .guests__header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 23pt;
+  }
+
+
+  .guests__photo {
+    height: 600px;
+  }
+
+  .guests__quote {
+    font-family: 'Bodega', sans-serif;
+    font-size: 25pt;
+  }
