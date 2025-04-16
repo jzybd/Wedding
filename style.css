@@ -69,7 +69,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 33.3%;
+    width: 30%;
     gap: 10px;
 }
 
@@ -92,7 +92,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: end;
-    width: 66.6%;
+    width: 70%;
     max-height: 500px;  
 }
 
@@ -107,7 +107,7 @@ body {
     flex-wrap: nowrap;
     flex-direction: column;
     align-items: end;
-    margin: 10px 20px 0px 0px;
+    margin: 10px 30px 0px 0px;
     font-size: 12pt;
     letter-spacing: 0.3em;
 }
@@ -329,7 +329,7 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: 0.05em;
     gap: 8px;
 }
