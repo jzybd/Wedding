@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Свадебное приглашение</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </head>
 <body>
     <div class="section">
         <div class="container">
-            <div class="names__top">
+            <div class="names__wrapper">
                 <div class="names__text">
                     <div class="text-symbol">Ж</div>
                     <div class="text-line"></div>
@@ -21,12 +22,10 @@
                 </div>
                 <div class="names__photo">
                     <img src="./img/IMG_6797.JPG" alt="" class="photo__img">
-                </div>
-            </div>
-            <div class="names__bottom">
-                <div class="names__date-invite">
-                    <div class="date__invite-top tilda-text">5 августа 2025</div>
-                    <div class="date__invite-bottom tilda-text">ЖДЕМ ВАС</div>
+                    <div class="names__photo-text">
+                        <div class="date__invite-top tilda-text">5 августа 2025</div>
+                        <div class="date__invite-bottom tilda-text">ЖДЕМ ВАС</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -61,7 +60,7 @@
                     <div class="header__guest">Гость!</div>
                 </div>
                 <div class="guests__text">
-                    <div class="guests__text-top tilda-text">Мы рады сообщить Вам, что 05.08.2025 состоится самое 
+                    <div class="guests__text-top tilda-text">Мы рады сообщить Вам, что <span class="bold">05.08.2025</span> состоится самое 
                         главное торжество в нашей жизни - день нашей свадьбы!</div>
                     <div class="guests__text-bottom tilda-text">Приглашаем Вас разделить с нами 
                         радость этого незабываемого дня.</div>
@@ -111,8 +110,76 @@
             <div class="information__waiting">
                 <div class="information__waiting-quote">Ждем Вас!</div>
                 <div class="information__waiting-photo">
-                    <img src="./img/photo_2025-04-15_00-57-41.jpg" class="photo__img circle-photo">
+                    <img src="./img/photo_2025-04-15_00-57-41.jpg" class="photo__img circle">
                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="container container__accept">
+            <div class="palette__info">
+                <div class="palette__info-text tilda-text">
+                Будем благодарны, если при выборе нарядов на 
+                наше торжество вы придержитесь следующей палитры:</div>
+                <div class="palette__info-colors">
+                    <div class="info-colors"></div>
+                    <div class="info-colors"></div>
+                    <div class="info-colors"></div>
+                    <div class="info-colors"></div>
+                    <div class="info-colors"></div>
+                </div>
+            </div>
+            <div id="confirm-block" class="fade-block active" onclick="launchHeartConfetti()">  
+                <button id="confirm-btn" class="tilda-text"><img src="/Wedding/img/free-icon-accept-7192355.png" class="icon">Подтвердить</button>
+            </div>
+            <div id="thanks-block" class="fade-block">
+                <div class="cancel-text-btn tilda-text">
+                    <div class="cancel-text-wrapper">
+                        <img src="/Wedding/img/hands-up.png" alt="" class="cancel-text-image">
+                        <div class="cancel-text">Спасибо, что подтвердили свое присутствие!
+                        <b>Данил</b> и <b>Елизавета</b> уже оповещены об этом ;)</div>
+                    </div>
+                    <button id="cancel-btn" class="tilda-text">Отменить подтверждение</button>
+                </div>
+                
+                <div class="survey-text tilda-text">
+                Пожалуйста, ответьте на вопросы, которые для вас подготовили <b>Данил</b> и <b>Елизавета</b>:
+                </div>
+
+                <form id="survey-form" class="survey-flex tilda-text">
+
+                    <div class="survey-label-flex">
+                      1. Есть ли у вас особые предпочтения по еде?
+                      <div class="label-input">
+                        <label><input type="radio" name="food_pref" value="Нет"> Нет</label>
+                        <label><input type="radio" name="food_pref" value="Не ем мясо"> Не ем мясо</label>
+                        <label><input type="radio" name="food_pref" value="Не ем рыбу"> Не ем рыбу</label>
+                        </div>
+                    </div>
+              
+                    <div class="survey-label-flex">
+                      2. Какой алкоголь вы предпочитаете?
+                      <div class="label-input">
+                        <label><input type="checkbox" name="alcohol" value="Красное вино"> Красное вино</label>
+                        <label><input type="checkbox" name="alcohol" value="Белое вино"> Белое вино</label>
+                        <label><input type="checkbox" name="alcohol" value="Шампанское"> Шампанское</label>
+                        <label><input type="checkbox" name="alcohol" value="Виски/коньяк"> Виски / Коньяк</label>
+                        <label><input type="checkbox" name="alcohol" value="Водка"> Водка</label>
+                        <label><input type="checkbox" name="alcohol" value="Не буду пить"> Не буду пить алкоголь</label>
+                      </div>
+                    </div>
+              
+                    <div class="survey-label-flex">
+                      3. Будет ли с вами на празднике ребенок?
+                      <div class="label-input">
+                        <label><input type="radio" name="child" value="Да"> Да</label>
+                        <label><input type="radio" name="child" value="Нет"> Нет</label>
+                      </div>
+                    </div>
+              
+                    <button type="submit" class="survey-send-btn">Отправить ответы</button>
+                  </form>
+
             </div>
         </div>
     </div>
@@ -122,5 +189,6 @@
 
 
     <script src="countdown.js"></script>
+    <script src="survey.js"></script>
 </body>
 </html>
