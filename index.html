@@ -89,6 +89,7 @@
                 <h1>ПОЖЕЛАНИЯ ПО ПОДАРКАМ</h1>
                 <div class="information-text tilda-text">
                     Ваше присутствие в день нашей свадьбы - самый значимый подарок для нас!
+                    <br>
                     Но если вы всё же захотите порадовать нас чем-то особенным, 
                     будем признательны за подарок в конверте — это поможет нам осуществить 
                     мечту о совместном путешествии
@@ -144,7 +145,7 @@
                 <div class="survey-text tilda-text">
                 Пожалуйста, ответьте на вопросы, которые для вас подготовили <b>Данил</b> и <b>Елизавета</b>:
                 </div>
-                <form id="survey-form" class="survey-flex tilda-text">
+                <form action="https://formsubmit.co/sobolewa.liza2000@yandex.ru" method="POST" class="survey-flex tilda-text">
                     <div class="survey-label-flex">
                         <b>Пожалуйста, укажите свое имя и фамилию, чтобы мы знали, кто отправил подтверждение</b>
                         <label><input type="text" name="name_surname" placeholder="Имя Фамилия" class="input_name"></label>
@@ -160,12 +161,12 @@
                     <div class="survey-label-flex">
                       2. Какой алкоголь вы предпочитаете?
                       <div class="label-input">
-                        <label><input type="checkbox" name="alcohol" value="Красное вино"> Красное вино</label>
-                        <label><input type="checkbox" name="alcohol" value="Белое вино"> Белое вино</label>
-                        <label><input type="checkbox" name="alcohol" value="Шампанское"> Шампанское</label>
-                        <label><input type="checkbox" name="alcohol" value="Виски/коньяк"> Виски / Коньяк</label>
-                        <label><input type="checkbox" name="alcohol" value="Водка"> Водка</label>
-                        <label><input type="checkbox" name="alcohol" value="Не буду пить"> Не буду пить алкоголь</label>
+                        <label><input type="checkbox" name="alcohol[]" value="Красное вино"> Красное вино</label>
+                        <label><input type="checkbox" name="alcohol[]" value="Белое вино"> Белое вино</label>
+                        <label><input type="checkbox" name="alcohol[]" value="Шампанское"> Шампанское</label>
+                        <label><input type="checkbox" name="alcohol[]" value="Виски/коньяк"> Виски / Коньяк</label>
+                        <label><input type="checkbox" name="alcohol[]" value="Водка"> Водка</label>
+                        <label><input type="checkbox" name="alcohol[]" value="Не буду пить"> Не буду пить алкоголь</label>
                       </div>
                     </div>
                     <div class="survey-label-flex">
@@ -175,6 +176,7 @@
                         <label><input type="radio" name="child" value="Нет"> Нет</label>
                       </div>
                     </div>
+                    <input type="hidden" name="_captcha" value="false">
                     <button type="submit" class="survey-send-btn">Отправить ответы</button>
                   </form>
             </div>
