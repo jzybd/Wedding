@@ -129,7 +129,7 @@
                     <div class="info-colors"></div>
                 </div>
             </div>
-            <div id="confirm-block" class="fade-block active" onclick="launchHeartConfetti()">  
+            <div id="confirm-block" class="fade-block active">  
                 <button id="confirm-btn" class="tilda-text"><img src="/Wedding/img/free-icon-accept-7192355.png" class="icon">Подтвердить</button>
             </div>
             <div id="thanks-block" class="fade-block">
@@ -147,7 +147,7 @@
                 <form id="survey-form" class="survey-flex tilda-text">
                     <div class="survey-label-flex">
                         <b>Пожалуйста, укажите свое имя и фамилию, чтобы мы знали, кто отправил подтверждение</b>
-                        <label><input type="text" name="name_surname" placeholder="Имя Фамилия"></label>
+                        <label><input type="text" name="name_surname" placeholder="Имя Фамилия" class="input_name"></label>
                     </div>
                     <div class="survey-label-flex">
                       1. Есть ли у вас особые предпочтения по еде?
@@ -226,8 +226,10 @@
 
 
 
-
+    <canvas id="confetti-canvas" style="position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:999;"></canvas>
     <script src="countdown.js"></script>
     <script src="survey.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="confetti.js"></script>
 </body>
 </html>

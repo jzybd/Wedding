@@ -102,7 +102,7 @@ body {
     flex-direction: column;
     align-items: end;
     width: 70%;
-    max-height: 500px;  
+    max-height: 600px;  
 }
 
 .photo__img {
@@ -311,6 +311,10 @@ h1 {
     font-size: 14px;
     cursor: pointer;
     font-weight: bold;
+}
+
+.input_name {
+    padding: 5px 10px;
 }
 
 .survey-text {

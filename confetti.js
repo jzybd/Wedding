@@ -1,29 +1,48 @@
-// document.getElementById('confirm-btn').addEventListener('click', () => {
-//     const duration = 1 * 1000;
-//     const animationEnd = Date.now() + duration;
-//     const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 1000 };
+document.addEventListener('DOMContentLoaded', () => {
+    const canvas = document.getElementById('confetti-canvas');
+    const confirmBtn = document.getElementById('confirm-btn');
   
-//     function randomInRange(min, max) {
-//       return Math.random() * (max - min) + min;
-//     }
+    if (!canvas || !confirmBtn) return;
   
-//     const interval = setInterval(function() {
-//       const timeLeft = animationEnd - Date.now();
+    const myConfetti = confetti.create(canvas, {
+      resize: true,
+      useWorker: false
+    });
   
-//       if (timeLeft <= 0) {
-//         return clearInterval(interval);
-//       }
+    confirmBtn.addEventListener('click', () => {
+      // Центр — разноцветные, летят долго
+      myConfetti({
+        particleCount: 400,
+        spread: 160,
+        startVelocity: 40,
+        ticks: 600, // Долгоживущие
+        gravity: 0.8, // Медленно падают
+        origin: { x: 0.5, y: 0.3 },
+        colors: ['#ff0', '#0f0', '#f0f', '#0ff', '#f00', '#00f']
+      });
   
-//       // левый край
-//       confetti(Object.assign({}, defaults, {
-//         origin: { x: 0, y: Math.random() },
-//         particleCount: 2
-//       }));
+      // Левая сторона — фиолетовые
+      myConfetti({
+        particleCount: 600,
+        angle: 60,
+        spread: 80,
+        startVelocity: 60,
+        ticks: 600,
+        gravity: 0.8,
+        origin: { x: 0, y: 0.5 },
+        colors: ['#a020f0', '#b266ff']
+      });
   
-//       // правый край
-//       confetti(Object.assign({}, defaults, {
-//         origin: { x: 1, y: Math.random() },
-//         particleCount: 2
-//       }));
-//     }, 100);
-//   });
+      // Правая сторона — фиолетовые
+      myConfetti({
+        particleCount: 600,
+        angle: 120,
+        spread: 80,
+        startVelocity: 60,
+        ticks: 600,
+        gravity: 0.8,
+        origin: { x: 1, y: 0.5 },
+        colors: ['#a020f0', '#b266ff']
+      });
+    });
+  });
