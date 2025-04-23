@@ -195,6 +195,10 @@ body {
     font-size: 25pt;
   }
 
+  .guests__text-location {
+    margin-top: 20px;
+  }
+
 .container__info {
     margin-top: 50px;
 }
